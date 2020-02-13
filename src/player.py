@@ -4,6 +4,7 @@
 
 class Player:
     """Information for current player in game."""
+    inventory = []
 
     def __init__(self, name, current_room):
         self.name = name
@@ -28,3 +29,10 @@ class Player:
             ''')
         else:
             print('Player cannot move that direction from here.')
+
+    def print_inventory(self):
+        if len(self.inventory) > 0:
+            print(f'You are carrying {self.inventory}')
+
+        else:
+            print('Your inventory is empty.')

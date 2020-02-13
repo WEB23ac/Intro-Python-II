@@ -8,6 +8,7 @@ class Room:
     e_to = None
     s_to = None
     w_to = None
+    items = []
 
     def __init__(self, name, description):
         self.name = name
@@ -18,3 +19,9 @@ class Room:
 
     def __repr__(self):
         return f'{self.name}, {self.description}'
+
+    def list_items(self):
+        return f'This room contains {self.items}'
+
+    # def check_item(self, item):
+    #   if item in self.items == True:
